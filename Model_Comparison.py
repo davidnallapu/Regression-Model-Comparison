@@ -44,7 +44,7 @@ y_pred_DTR = sc_y.inverse_transform(y_pred_DTR)
 y_pred_RFR = regressor_RFR.predict(sc_X.transform(np.array([[6.5]])))
 y_pred_RFR = sc_y.inverse_transform(y_pred_RFR)"""
 
-# Visualising the SVR results (for higher resolution and smoother curve)
+# Visualising the results with high resolution and smooth curve
 X_grid = np.arange(min(X), max(X), 0.01) # choice of 0.01 instead of 0.1 step because the data is feature scaled
 X_grid = X_grid.reshape((len(X_grid), 1))
 plt.scatter(X, y, color = 'red')
